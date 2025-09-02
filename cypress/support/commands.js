@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('login', (username, password) => {
+  cy.clearAllLocalStorage()
   cy.visit('https://safdarjamal.github.io/crud-app/')
   cy.get('h1').should('have.text','Admin Login')
    cy.get('[name="email"]')
