@@ -10,7 +10,7 @@ Now execute this steps below:
 
 
  -open the terminal and execute` npm install`
- 
- -`npx cypress open`
+
+ -Now to open cypress interface execute `npx cypress open`
 
  Chose what u want to see. Enjoy!
