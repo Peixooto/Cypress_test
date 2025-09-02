@@ -7,7 +7,10 @@ Now execute this steps below:
 
 
  -`clone this repository`
+
+
  -open the terminal and execute` npm install`
+ 
  -`npx cypress open`
 
  Chose what u want to see. Enjoy!
