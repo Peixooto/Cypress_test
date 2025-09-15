@@ -25,10 +25,10 @@ jobs:
      run: |
       npm install
       npm install cypress --save-dev-
-    #  working-directory: ./
+     working-directory: ./
 
    - name: Running tests
      run: npx cypress run
-    #  working-directory: ./
+     working-directory: ./
 
 
