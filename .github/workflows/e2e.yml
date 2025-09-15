@@ -32,15 +32,17 @@ jobs:
 
    - name: Running tests
      run: npx cypress run
-     
+
+   - uses: cypress-io/github-action@v6  
+   
    - uses: actions/upload-artifact@v4
      if: failure()
      with:
-          name: cypress-screenshots
-          path: cypress/screenshots
-          if-no-files-found: ignore
+      name: cypress-screenshots
+      path: cypress/screenshots
+     if-no-files-found: ignore
    - uses: actions/upload-artifact@v4
      with:
-          name: cypress-videos
-          path: cypress/videos
-          if-no-files-found: ignore 
+      name: cypress-videos
+      path: cypress/videos
+      if-no-files-found: ignore 
