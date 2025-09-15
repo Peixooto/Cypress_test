@@ -23,8 +23,9 @@ jobs:
 
 
    - name: Dependencies check
-    #  working-directory: ./
-     run: npm install
+     working-directory: ./
+     run: npm init y
+          npm install
 
    - name: Running tests
      run: npx cypress open
