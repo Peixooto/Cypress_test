@@ -38,6 +38,5 @@ Cypress.Commands.add('login', (username, password) => {
    cy.get('.swal2-loader')
    cy.get('#swal2-title').should('have.text','Successfully logged in!')
 
-  // Exemplo: espera redirecionar para dashboard
   cy.url().should('include', '/crud-app/')
 })

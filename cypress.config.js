@@ -11,5 +11,7 @@ module.exports = defineConfig({
     },
     baseUrl:'https://safdarjamal.github.io/crud-app/',
     testIsolation: false,
+    viewportWidth:1980,
+    viewportHeight:1080,
   },
 });

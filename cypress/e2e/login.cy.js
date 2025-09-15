@@ -90,7 +90,11 @@ context('Actions', () => {
       cy.get('h1').should('have.text','Employee Management Software')
   })
 
-  it.only('viewport test', () => {
+  it('viewport test', () => {
+     cy.viewport(760,768)
+     cy.viewport('samsung-s10')
      cy.viewport('macbook-15')
+     cy.viewport(390,844)
+     cy.viewport(430,932)
   })
 })
