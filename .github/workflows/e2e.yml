@@ -14,11 +14,16 @@ jobs:
      with:
       node-version: '22'
 
-  #  - name: Show current directory
-  #    run: pwd
+   - name: Debug workspace
+     run: |
+        echo "Current path:"
+        pwd
+        echo "Files here:"
+        ls -la
+
 
    - name: Dependencies check
-     working-directory: ./
+    #  working-directory: ./
      run: npm install
 
    - name: Running tests
