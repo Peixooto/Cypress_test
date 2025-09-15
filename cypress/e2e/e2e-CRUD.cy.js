@@ -65,7 +65,7 @@ context('Actions', () => {
       cy.get('[type="submit"]')
       .click()
     //   cy.get('[type="button"]')
-    cy.get('.swal2-popup').should('contain.text',"Added!")
+    cy.get('.swal2-popup').should('contain.text',"Addeda!")
   })
 
   it('cancel create', () => {
