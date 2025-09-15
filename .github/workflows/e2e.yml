@@ -12,7 +12,7 @@ jobs:
    - name: Node verification
      uses: actions/setup-node@v3
      with:
-      node-version: '22'
+      node-version: '18'
 
    - name: Debug workspace
      run: |
@@ -23,13 +23,12 @@ jobs:
 
    - name: Dependencies check
      run: |
-      npm init -y
       npm install
-      npm install cypress --save-dev-
-     working-directory: ./
+      npm install cypress --save-dev
+    #  working-directory: ./
 
    - name: Running tests
      run: npx cypress run
-     working-directory: ./
+    #  working-directory: ./
 
 
