@@ -18,8 +18,8 @@ jobs:
   #    run: pwd
 
    - name: Dependencies check
-     run: npm install
      working-directory: ./
+     run: npm install
 
    - name: Running tests
      run: npx cypress open
