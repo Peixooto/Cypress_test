@@ -1,0 +1,23 @@
+name: Cypress E2E
+
+on:
+ push: 
+  branches: [main]
+
+jobs:
+ e2e-tests:
+  runs-on: ubuntu-latest
+
+  steps: 
+   - name: Node verification
+     uses: actions/setup-node@v3
+     with:
+      node-version: '22'
+
+   - name: Dependencies check
+     run: npm install
+
+   - name: Running tests
+     run: npx cypress open
+
+
