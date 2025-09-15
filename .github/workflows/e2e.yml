@@ -27,5 +27,6 @@ jobs:
 
    - name: Running tests
      run: npx cypress run 
+     working-directory: ./
 
 
