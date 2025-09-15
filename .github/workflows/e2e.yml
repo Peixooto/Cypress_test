@@ -23,7 +23,7 @@ jobs:
 
 
    - name: Dependencies check
-     run: npm install
+     run: npm install cypress --save-dev
      working-directory: ./
 
    - name: Running tests
