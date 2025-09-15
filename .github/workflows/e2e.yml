@@ -27,6 +27,6 @@ jobs:
 
    - name: Running tests
      run: npx cypress run --browser chrome --headless
-     working-directory: ./Cypress_test
+    #  working-directory: ./Cypress_test
 
 
