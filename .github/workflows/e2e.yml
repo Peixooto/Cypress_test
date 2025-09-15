@@ -1,54 +1,3 @@
-# name: Cypress E2E
-
-# on:
-#  push: 
-#   branches: [main]
-
-# jobs:
-#  e2e-tests:
-#   runs-on: ubuntu-latest
-
-#   steps: 
-
-#    - name: Checkout repository
-#      uses: actions/checkout@v3
-
-#    - name: Node verification
-#      uses: actions/setup-node@v3
-#      with:
-#       node-version: 22
-
-#    - name: Debug workspace
-#      run: |
-#         echo "Current path:"
-#         pwd
-#         echo "Files here:"
-#         ls -la
-
-#    - name: Dependencies check
-#      run: |
-#       npm install
-#       npm install cypress --save-dev
-
-#    - name: Running tests
-#      run: npx cypress run
-
-#    - uses: cypress-io/github-action@v6  
-   
-#    - uses: actions/upload-artifact@v4
-#      if: failure()
-#      with:
-#       name: cypress-screenshots
-#       path: cypress/screenshots
-#      if-no-files-found: ignore
-#    - uses: actions/upload-artifact@v4
-#      with:
-#       name: cypress-videos
-#       path: cypress/videos
-#       if-no-files-found: ignore 
-
-#teste 2
-
 name: Cypress E2E
 
 on:
@@ -78,7 +27,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # 🔹 Rodando Cypress headless via action oficial
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
         with:
@@ -86,7 +34,6 @@ jobs:
           headed: false
           record: false
 
-      # 🔹 Upload de screenshots em caso de falha
       - name: Upload screenshots
         if: failure()
         uses: actions/upload-artifact@v4
@@ -95,7 +42,6 @@ jobs:
           path: cypress/screenshots
           if-no-files-found: ignore
 
-      # 🔹 Upload de vídeos sempre
       - name: Upload videos
         uses: actions/upload-artifact@v4
         with:
