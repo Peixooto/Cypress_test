@@ -5,13 +5,16 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-     env:{
-      username: 'admin@example.com',
-      password : 'qwerty',
+    env: {
+      username: "admin@example.com",
+      password: "qwerty",
     },
-    baseUrl:'https://safdarjamal.github.io/crud-app/',
+    baseUrl: "https://safdarjamal.github.io/crud-app/",
     testIsolation: false,
-    viewportWidth:1980,
-    viewportHeight:1080,
+    viewportWidth: 1980,
+    viewportHeight: 1080,
+    video: true,
+    screenshotOnRunFailure: true,
+    videoCompression: 32,
   },
 });
