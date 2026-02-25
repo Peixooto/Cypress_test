@@ -24,8 +24,8 @@ cache/*
 gitlab-runner*
 *.exe
 
-/cypress/videos/
-/cypress/screenshots/
+# /cypress/videos/
+# /cypress/screenshots/
 /allure-report
 /allure-results
 
